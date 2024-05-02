@@ -5,22 +5,21 @@ const CountdownTimer = () => {
 
     useEffect(()=> {
         const countTimer = setTimeout(() => {
-            if (timer === 0) {
-                clearTimeout(countTimer);
-            } else {
-                setTimer((timer) => timer - 1)
-            }
-        }, 200);
+            
+            if (timer === 0) clearTimeout(countTimer);         
+            else setTimer((timer) => timer - 1);
+            
+        }, 520);
 
         return () => {
             clearTimeout(countTimer)
         };
 
-    }, [timer]);
+    });
 
     return (
         <>
-            <p>{timer}</p>
+            <p>Timer: {timer}</p>
         </>
     )
 };

@@ -6,11 +6,11 @@ import WindowSize from './components/WindowSize'
 function App() {
 
   return (
-    <>
+    <div className='flexBlocks'>
       <CountdownTimer/>
       <UserList/>
       <WindowSize/>
-    </>
+    </div>
   )
 }
 
